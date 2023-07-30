@@ -12,7 +12,7 @@ export const NavBar = () => {
         <>
             <Navbar expand="lg" className="bg-body-tertiary" bg="primary" data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Proyecto 4 - Restaurant APP</Navbar.Brand>
+                    <Navbar.Brand href="/">Proyecto 4 - Restaurant APP</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
