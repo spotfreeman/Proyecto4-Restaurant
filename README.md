@@ -1,8 +1,45 @@
-# React + Vite
+# Proyecto3 - Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<a href="https://spotfreeman.github.io/Proyecto4-Restaurant/">[hthub.io/Proyecto3/](https://spotfreeman.github.io/Proyecto4-Restaurant/)</a>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descripción
+
+
+## Insignias
+
+![Badge en Desarrollo](https://img.shields.io/badge/STATUS-EnDesarrollo-green)
+
+## Visual
+
+
+
+## Construido con 🛠️
+
+Herramientas utilizadas para crear el proyecto:
+
+* HTML - Estructura del sitio web.
+* CSS - Estilos y diseño visual.
+* Bootstrap - Estilos y diseño visual.
+* JavaScript - Lógica y funcionalidad del gestor de tareas.
+* DOM - Manipulación del árbol de objetos del documento.
+* Firebase - Almacenamiento de datos.
+
+## Contribuir 🖇️
+
+Este proyecto es de código abierto y las contribuciones son bienvenidas. Puedes colaborar mejorando el diseño, agregando nuevas funcionalidades o corrigiendo errores. ¡Siéntete libre de enviar tus pull requests!
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE.md](LICENSE.md) para obtener más detalles.
+
+## Expresiones de gratitud 🎁
+
+Agradecimientos especiales a todos por el apoyo y la motivacion a realizar este Bootcamp...
+Este archivo readme se ha desarrollado utilizando como referencia los siguientes proyectos:
+
+* [template-readme-es](https://github.com/brayandiazc/template-readme-es) - creado por [Brayan Diaz C](https://github.com/brayandiazc)
+
+---
+⌨ ️con ❤️ por [Raul Oyarzun Becerra](https://github.com/spotfreeman) Gracias por el apoyo! 
+<a href="https://www.linkedin.com/in/ra%C3%BAl-oyarz%C3%BAn-becerra-6430b171/"> Linkedin </a>
