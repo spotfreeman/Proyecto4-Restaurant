@@ -1,4 +1,4 @@
-# Proyecto3 - Dashboard
+# Proyecto4 - Restaurant
 
 <a href="https://spotfreeman.github.io/Proyecto4-Restaurant/">[hthub.io/Proyecto3/](https://spotfreeman.github.io/Proyecto4-Restaurant/)</a>
 
