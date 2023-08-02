@@ -20,6 +20,7 @@ export const NavBar = () => {
                             <NavLink to="/Menu">Menu</NavLink>
                             <NavLink to="/Reservas">Reservas</NavLink>
                             <NavLink to="/About">About</NavLink>
+                            <NavLink to="/Admin">Admin</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
