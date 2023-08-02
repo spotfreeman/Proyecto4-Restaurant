@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { db } from '../firebase/firebase'
-
+import { Table } from 'react-bootstrap';
 
 export const Admin = () => {
     const [inicial, setInicial] = useState([])
@@ -21,14 +21,35 @@ export const Admin = () => {
 
     return (
         <>
-            <h1>Reservas</h1>
-            {reserva.map((reserva) => (
+            {/*             <h1>Reservas</h1>
+            {inicial.map((reservas) => (
                 <ul>
-                    <li>{reserva.nombre}</li>
-                    <li>{reserva.fecha}</li>
-                    <li>{reserva.comensales}</li>
+                    <li>{reservas.nombre}</li>
+                    <li>{reservas.fecha}</li>
+                    <li>{reservas.comensales}</li>
                 </ul>
-            ))}
+            ))} */}
+
+            <Table striped border hover>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha</th>
+                        <th>Comensales</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {inicial.map((reservas) => (
+                        <tr>
+                            <td>{reservas.nombre}</td>
+                            <td>{reservas.fecha}</td>
+                            <td>{reservas.comensales}</td>
+                        </tr>
+                    ))}
+
+                </tbody>
+            </Table>
         </>
     );
 };
