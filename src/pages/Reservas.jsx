@@ -27,7 +27,7 @@ export const Reservas = () => {
     }
 
     return (
-        <>
+        <>A
             <h1>Reservas</h1>
             <form className="form gap-5 p-5" onSubmit={onSubmit}>
                 <input
