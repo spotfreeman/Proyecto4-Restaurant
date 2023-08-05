@@ -21,16 +21,6 @@ export const Admin = () => {
 
     return (
         <>
-            {/* Ejemplo de lectura de DOCUMENTO FIREBASE
-            <h1>Reservas</h1>
-            {inicial.map((reservas) => (
-                <ul>
-                    <li>{reservas.nombre}</li>
-                    <li>{reservas.fecha}</li>
-                    <li>{reservas.comensales}</li>
-                </ul>
-            ))} 
-            */}
 
             <div className="card m-3">
                 <h5 className='card-header'> Listado de Reservas </h5>
