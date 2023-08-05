@@ -35,7 +35,7 @@ export const Admin = () => {
             <div className="card m-3">
                 <h5 className='card-header'> Listado de Reservas </h5>
                 <div className="card-body">  </div>
-                <p className='card-text'>Texto caja</p>
+
 
                 <Table striped border hover className='m-3'>
                     <thead>
