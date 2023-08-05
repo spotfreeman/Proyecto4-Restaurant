@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { db } from '../firebase/firebase'
+import Form from 'react-bootstrap/Form'
 
 export const Reservas = () => {
     const initialReserva = {
@@ -59,6 +60,8 @@ export const Reservas = () => {
                         value={reserva.fecha}
                         onChange={onChange}
                     />
+
+
 
                     <button
                         type="submit"
