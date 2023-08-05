@@ -21,14 +21,16 @@ export const Admin = () => {
 
     return (
         <>
-            {/*             <h1>Reservas</h1>
+            {/* Ejemplo de lectura de DOCUMENTO FIREBASE
+            <h1>Reservas</h1>
             {inicial.map((reservas) => (
                 <ul>
                     <li>{reservas.nombre}</li>
                     <li>{reservas.fecha}</li>
                     <li>{reservas.comensales}</li>
                 </ul>
-            ))} */}
+            ))} 
+            */}
 
             <Table striped border hover>
                 <thead>
