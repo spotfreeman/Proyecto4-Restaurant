@@ -11,7 +11,7 @@ export const Footer = () => {
                 <Card.Body>
                     <Card.Title className=''>Footer Titulo</Card.Title>
                     <Card.Text>
-                        With supporting text below as a natural lead-in to additional content.
+                        With supporting text
                     </Card.Text>
                 </Card.Body>
             </Card>
