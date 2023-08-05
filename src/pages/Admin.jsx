@@ -32,26 +32,33 @@ export const Admin = () => {
             ))} 
             */}
 
-            <Table striped border hover>
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Fecha</th>
-                        <th>Comensales</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <div className="card m-3">
+                <h5 className='card-header'> Listado de Reservas </h5>
+                <div className="card-body">  </div>
+                <p className='card-text'>Texto caja</p>
 
-                    {inicial.map((reservas) => (
+                <Table striped border hover className='m-3'>
+                    <thead>
                         <tr>
-                            <td>{reservas.nombre}</td>
-                            <td>{reservas.fecha}</td>
-                            <td>{reservas.comensales}</td>
+                            <th>Nombre</th>
+                            <th>Fecha</th>
+                            <th>Comensales</th>
                         </tr>
-                    ))}
+                    </thead>
+                    <tbody>
 
-                </tbody>
-            </Table>
+                        {inicial.map((reservas) => (
+                            <tr>
+                                <td>{reservas.nombre}</td>
+                                <td>{reservas.fecha}</td>
+                                <td>{reservas.comensales}</td>
+                            </tr>
+                        ))}
+
+                    </tbody>
+                </Table>
+            </div>
+
         </>
     );
 };

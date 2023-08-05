@@ -4,6 +4,8 @@ export const Menu = () => {
             <div>
                 <h1>Menu</h1>
             </div>
+
+            <h2> Papas Fritas </h2>
         </>
 
     );
