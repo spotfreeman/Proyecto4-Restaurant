@@ -27,40 +27,45 @@ export const Reservas = () => {
     }
 
     return (
-        <>A
-            <h1>Reservas</h1>
-            <form className="form gap-5 p-5" onSubmit={onSubmit}>
-                <input
-                    type="text"
-                    className="form-control mt-3"
-                    name="nombre"
-                    placeholder="Ingrese su nombre"
-                    value={reserva.nombre}
-                    onChange={onChange}
-                />
+        <>
+            <div className="card m-3">
+                <h5 className='card-header'> Reservar Mesa </h5>
 
-                <input
-                    type="number"
-                    className="form-control mt-3"
-                    name="comensales"
-                    placeholder="Cantidad de clientes"
-                    value={reserva.comensales}
-                    onChange={onChange}
-                />
 
-                <input
-                    type="datetime"
-                    className="form-control mt-3"
-                    name="fecha"
-                    placeholder="Fecha de su reserva"
-                    value={reserva.fecha}
-                    onChange={onChange}
-                />
+                <form className="form gap-5 p-5" onSubmit={onSubmit}>
+                    <input
+                        type="text"
+                        className="form-control mt-3"
+                        name="nombre"
+                        placeholder="Ingrese su nombre"
+                        value={reserva.nombre}
+                        onChange={onChange}
+                    />
 
-                <button
-                    type="submit"
-                    className="btn btn-primary mt-3">Enviar</button>
-            </form>
+                    <input
+                        type="number"
+                        className="form-control mt-3"
+                        name="comensales"
+                        placeholder="Cantidad de clientes"
+                        value={reserva.comensales}
+                        onChange={onChange}
+                    />
+
+                    <input
+                        type="datetime"
+                        className="form-control mt-3"
+                        name="fecha"
+                        placeholder="Fecha de su reserva"
+                        value={reserva.fecha}
+                        onChange={onChange}
+                    />
+
+                    <button
+                        type="submit"
+                        className="btn btn-primary mt-3"> Enviar Reserva </button>
+                </form>
+            </div>
+
 
         </>
     );
