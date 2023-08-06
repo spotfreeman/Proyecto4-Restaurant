@@ -11,7 +11,9 @@ export const Footer = () => {
                 <Card.Body>
                     <Card.Title className=''>Footer Titulo</Card.Title>
                     <Card.Text>
-                        With supporting text
+                        Direccion Irarrazaval 99999, Nunoa
+
+                        Ubicacion MAPS
                     </Card.Text>
                 </Card.Body>
             </Card>
