@@ -6,7 +6,8 @@ export const Reservas = () => {
     const initialReserva = {
         nombre: '',
         comensales: '',
-        fecha: ''
+        fecha: '',
+        mesa:''
     }
 
     const [reserva, setReserva] = useState(initialReserva)
@@ -32,7 +33,6 @@ export const Reservas = () => {
             <div className="card m-3">
                 <h5 className='card-header'> Reservar Mesa </h5>
 
-
                 <form className="form gap-5 p-5" onSubmit={onSubmit}>
                     <input
                         type="text"
@@ -41,6 +41,7 @@ export const Reservas = () => {
                         placeholder="Ingrese su nombre"
                         value={reserva.nombre}
                         onChange={onChange}
+                        required
                     />
 
                     <input
@@ -50,18 +51,64 @@ export const Reservas = () => {
                         placeholder="Cantidad de clientes"
                         value={reserva.comensales}
                         onChange={onChange}
+                        required
                     />
 
                     <input
-                        type="datetime"
+                        type="date"
                         className="form-control mt-3"
                         name="fecha"
                         placeholder="Fecha de su reserva"
                         value={reserva.fecha}
                         onChange={onChange}
+                        required
                     />
-
-
+                    <div>
+                    <h6>Escoge tu mesa</h6>
+                    <Form>
+                    {['radio'].map((type) => (
+                        <div key={`inline-${type}`} className="mb-3">
+                        <Form.Check
+                            inline
+                            label="1"
+                            name="mesa"
+                            type={type}
+                            id={`inline-${type}-1`}
+                            value='1'
+                            onChange={onChange}
+                        />
+                        <Form.Check
+                            inline
+                            label="2"
+                            name="mesa"
+                            type={type}
+                            id={`inline-${type}-2`}
+                            value='2'
+                            onChange={onChange}
+                        />
+                        <Form.Check
+                            inline
+                            label="3"
+                            name="mesa"
+                            type={type}
+                            id={`inline-${type}-3`}
+                            value='3'
+                            onChange={onChange}
+                        />
+                        <Form.Check
+                            inline
+                            label="4"
+                            name="mesa"
+                            type={type}
+                            id={`inline-${type}-4`}
+                            value='4'
+                            onChange={onChange}
+                        />
+                        
+                        </div>
+                    ))}
+                    </Form>
+                    </div>
 
                     <button
                         type="submit"

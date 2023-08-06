@@ -33,6 +33,7 @@ export const Admin = () => {
                             <th>Nombre</th>
                             <th>Fecha</th>
                             <th>Comensales</th>
+                            <th>Mesa</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,9 +43,9 @@ export const Admin = () => {
                                 <td>{reservas.nombre}</td>
                                 <td>{reservas.fecha}</td>
                                 <td>{reservas.comensales}</td>
+                                <td>{reservas.mesa}</td>
                             </tr>
                         ))}
-
                     </tbody>
                 </Table>
             </div>
