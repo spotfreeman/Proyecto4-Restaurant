@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 export const Footer = () => {
     return (
         <>
-            <Card bg='dark text-white'>
+            <Card bg='dark text-white rounded-0'>
                 <Card.Header>Footer</Card.Header>
                 <Card.Body>
                     <Card.Title className=''>Footer Titulo</Card.Title>

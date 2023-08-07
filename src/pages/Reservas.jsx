@@ -32,8 +32,8 @@ export const Reservas = () => {
 
     return (
         <>
-            <div className="card m-2">
-                <h5 className='card-header text-center'> RESERVAS </h5>
+            <div className="card m-2 border-0">
+                <h5 className='card-header text-center border-0'> RESERVAS </h5>
 
                 <form className="form gap-5 p-2" onSubmit={onSubmit}>
                     <input
