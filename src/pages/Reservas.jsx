@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { db } from '../firebase/firebase'
 import Form from 'react-bootstrap/Form'
+import Image  from "react-bootstrap/Image";
+import imagenRestaurant from '../assets/img/imagenRestaurant.jpg'
 
 export const Reservas = () => {
     const initialReserva = {
@@ -30,10 +32,10 @@ export const Reservas = () => {
 
     return (
         <>
-            <div className="card m-3">
-                <h5 className='card-header'> Reservar Mesa </h5>
+            <div className="card m-2">
+                <h5 className='card-header text-center'> RESERVAS </h5>
 
-                <form className="form gap-5 p-5" onSubmit={onSubmit}>
+                <form className="form gap-5 p-2" onSubmit={onSubmit}>
                     <input
                         type="text"
                         className="form-control mt-3"
@@ -64,6 +66,7 @@ export const Reservas = () => {
                         required
                     />
                     <div>
+                    <h3></h3>
                     <h6>Escoge tu mesa</h6>
                     <Form>
                     {['radio'].map((type) => (
@@ -114,6 +117,9 @@ export const Reservas = () => {
                         type="submit"
                         className="btn btn-primary mt-3"> Enviar Reserva </button>
                 </form>
+                <div className="text-center">
+                    <Image src={imagenRestaurant} />
+                </div>
             </div>
 
 
