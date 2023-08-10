@@ -37,6 +37,7 @@ export const Reservas = () => {
 
                 <form className="form gap-5 p-2" onSubmit={onSubmit}>
                     <input
+                        style={{ width: '18rem' }}
                         type="text"
                         className="form-control mt-3"
                         name="nombre"
@@ -47,6 +48,7 @@ export const Reservas = () => {
                     />
 
                     <input
+                        style={{ width: '18rem' }}
                         type="number"
                         className="form-control mt-3"
                         name="comensales"
@@ -57,6 +59,7 @@ export const Reservas = () => {
                     />
 
                     <input
+                        style={{ width: '18rem' }}
                         type="date"
                         className="form-control mt-3"
                         name="fecha"
@@ -107,7 +110,15 @@ export const Reservas = () => {
                             value='4'
                             onChange={onChange}
                         />
-                        
+                                                <Form.Check
+                            inline
+                            label="5"
+                            name="mesa"
+                            type={type}
+                            id={`inline-${type}-4`}
+                            value='5'
+                            onChange={onChange}
+                        />
                         </div>
                     ))}
                     </Form>

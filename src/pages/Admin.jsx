@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { db } from '../firebase/firebase'
 import { Table } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card'
 
 export const Admin = () => {
     const [inicial, setInicial] = useState([])
@@ -21,19 +22,19 @@ export const Admin = () => {
 
     return (
         <>
+        <Card>
 
             <div className="card m-3">
                 <h5 className='card-header'> Listado de Reservas </h5>
                 <div className="card-body">  </div>
 
-
-                <Table striped border hover className='m-3'>
+                <Table striped border hover className='m-'>
                     <thead>
                         <tr>
-                            <th>Nombre</th>
-                            <th>Fecha</th>
-                            <th>Comensales</th>
-                            <th>Mesa</th>
+                            <th style={{ width: '20px' }} >Nombre</th>
+                            <th style={{ width: '10px' }}  >Fecha</th>
+                            <th style={{ width: '5px' }}  >Comensales</th>
+                            <th style={{ width: '5px' }}  >Mesa</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,6 +50,10 @@ export const Admin = () => {
                     </tbody>
                 </Table>
             </div>
+
+        </Card>
+
+
 
         </>
     );

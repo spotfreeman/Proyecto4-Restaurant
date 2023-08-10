@@ -10,31 +10,25 @@ export const Home = () => {
     return (
         <>
             <CarouselApp />
+        </div >
+        <div>
+            <h1 className="text-center">Especialidades</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sapiente atque quis eos necessitatibus commodi doloribus impedit modi ipsum nemo, nostrum, placeat nihil optio dolorem. Consequatur voluptatibus illo quas alias.</p>
+            <h3>Subtitulo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis fugit architecto, minus eaque necessitatibus ipsa porro ducimus totam illum atque itaque quod, vitae deserunt. Unde dolorum aliquid quaerat sit quisquam.</p>
+        </div>
 
-            <Card className="text-center" bg="dark text-white rounded-0  ">
-                <h2>Especialidades </h2>
-            </Card>
+        <Container>
+            <Row>
+                <Col>
+                <Card style={{ width: 'auto' }}>
+                  <Card.Body>
+                    
+                      <Image src={imagenVertical} />
 
-            <Card>
-
-            </Card>
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sapiente atque quis eos necessitatibus commodi doloribus impedit modi ipsum nemo, nostrum, placeat nihil optio dolorem. Consequatur voluptatibus illo quas alias.</p>
-                <h3>Subtitulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis fugit architecto, minus eaque necessitatibus ipsa porro ducimus totam illum atque itaque quod, vitae deserunt. Unde dolorum aliquid quaerat sit quisquam.</p>
-            </div>
-
-            <Container className="border-0">
-                <Row>
-                    <Col>
-                        <Card style={{ width: 'auto' }}>
-                            <Card.Body>
-
-                                <Image src={imagenVertical} />
-
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                  </Card.Body>
+                </Card>
+                </Col>
 
 
                     <Col>
@@ -53,12 +47,12 @@ export const Home = () => {
                     </Col>
                 </Row>
 
-                <Row>
-                    <Col>Columna 1</Col>
-                    <Col>Columna 2</Col>
-                    <Col>Columna 3</Col>
-                </Row>
-            </Container>
+            <Row>
+                <Col>Columna 1</Col>
+                <Col>Columna 2</Col>
+                <Col>Columna 3</Col>
+            </Row>
+        </Container>
         </>
     );
 };
