@@ -9,7 +9,7 @@ export const Footer = () => {
             <Card bg='dark text-white rounded-0'>
                 <Card.Header>Footer</Card.Header>
                 <Card.Body>
-                    <Card.Title className=''>Footer Titulo</Card.Title>
+                    <Card.Title>Footer Titulo</Card.Title>
                     <Card.Text>
                         Direccion Irarrazaval 99999, Nunoa
 

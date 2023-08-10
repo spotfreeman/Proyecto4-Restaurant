@@ -1,16 +1,14 @@
 import Accordion from '../components/Accordion'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card } from 'react-bootstrap';
 
 export const Menu = () => {
     return (
         <>
-            <div>
-                <h1>Menu</h1>
-            </div>
+            <Card bg='dark text-white rounded-0 text-center'>
+                <h2>Menu</h2>
+            </Card>
             <Accordion />
-
-
-
         </>
-
     );
 };
