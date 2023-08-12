@@ -7,22 +7,25 @@ import imagen03 from '../assets/img/imagen03.jpeg'
 function CarouselApp() {
   return (
     <Carousel>
+
       <Carousel.Item>
-        <Image src={imagen01} />
+        <Image src={imagen01} style={{ width: '100%' }} />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
+
       <Carousel.Item>
-        <Image src={imagen02} />
+        <Image src={imagen02} style={{ width: '100%' }} />
         <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
+
       <Carousel.Item>
-        <Image src={imagen03} />
+        <Image src={imagen03} style={{ width: '100%' }} />
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>
@@ -30,6 +33,7 @@ function CarouselApp() {
           </p>
         </Carousel.Caption>
       </Carousel.Item>
+
     </Carousel>
   );
 }

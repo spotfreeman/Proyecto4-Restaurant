@@ -1,15 +1,16 @@
-import { CarouselApp } from "../components/CarouselApp"
+import CarouselApp from "../components/CarouselApp"
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
-import { imagenVertical } from '../assets/img/pizzaVertical.jpg';
+import imagenVertical from '../assets/img/pizzaVertical.jpg';
 
 export const Home = () => {
     return (
         <>
             <CarouselApp />
+
             <Card className="border-0" >
                 <h1 className="text-center p-3">Especialidades</h1>
                 <p className="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sapiente atque quis eos necessitatibus commodi doloribus impedit modi ipsum nemo, nostrum, placeat nihil optio dolorem. Consequatur voluptatibus illo quas alias.</p>
@@ -24,9 +25,7 @@ export const Home = () => {
                         <Col >
                             <Card className="text-center bg-black border-0" style={{ width: '100%' }}>
                                 <Card.Body>
-
                                     <Image src={imagenVertical} />
-
                                 </Card.Body>
                             </Card>
                         </Col>

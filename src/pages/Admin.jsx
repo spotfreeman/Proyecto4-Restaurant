@@ -22,39 +22,34 @@ export const Admin = () => {
 
     return (
         <>
-        <Card>
+            <Card>
+                <div className="card m-3">
+                    <h5 className='card-header'> Listado de Reservas </h5>
+                    <div className="card-body">  </div>
 
-            <div className="card m-3">
-                <h5 className='card-header'> Listado de Reservas </h5>
-                <div className="card-body">  </div>
-
-                <Table striped border hover className='m-'>
-                    <thead>
-                        <tr>
-                            <th style={{ width: '20px' }} >Nombre</th>
-                            <th style={{ width: '10px' }}  >Fecha</th>
-                            <th style={{ width: '5px' }}  >Comensales</th>
-                            <th style={{ width: '5px' }}  >Mesa</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        {inicial.map((reservas) => (
+                    <Table striped border hover className='m-'>
+                        <thead>
                             <tr>
-                                <td>{reservas.nombre}</td>
-                                <td>{reservas.fecha}</td>
-                                <td>{reservas.comensales}</td>
-                                <td>{reservas.mesa}</td>
+                                <th style={{ width: '20px' }} >Reserva a nombre de : </th>
+                                <th className='text-center' style={{ width: '10px' }} >Fecha de la reserva</th>
+                                <th className='text-center' style={{ width: '5px' }}  >Comensales</th>
+                                <th className='text-center' style={{ width: '5px' }}  >Mesa reservada</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </Table>
-            </div>
+                        </thead>
+                        <tbody>
 
-        </Card>
-
-
-
+                            {inicial.map((reservas) => (
+                                <tr>
+                                    <td>{reservas.nombre}</td>
+                                    <td className='text-center'>{reservas.fecha}</td>
+                                    <td className='text-center'>{reservas.comensales}</td>
+                                    <td className='text-center'>{reservas.mesa}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </Table>
+                </div>
+            </Card>
         </>
     );
 };

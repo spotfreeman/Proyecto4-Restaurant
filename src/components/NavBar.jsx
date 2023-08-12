@@ -12,15 +12,15 @@ export const NavBar = () => {
         <>
             <Navbar expand="lg" className="bg-body-tertiary" bg="primary" data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand href="/">Proyecto 4 - Restaurant APP</Navbar.Brand>
+                    <Navbar.Brand href="/"><h2>Proyecto 4 - Restaurant APP</h2></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <NavLink to="/">Home</NavLink>
-                            <NavLink to="/Menu">Menu</NavLink>
-                            <NavLink to="/Reservas">Reservas</NavLink>
-                            <NavLink to="/About">About</NavLink>
-                            <NavLink to="/Admin">Admin</NavLink>
+                            <NavLink to="/"><h3> Home </h3></NavLink>
+                            <NavLink to="/Menu"><h3> Menu </h3></NavLink>
+                            <NavLink to="/Reservas"><h3> Reservas </h3></NavLink>
+                            <NavLink to="/About"><h3> Nosotros </h3></NavLink>
+                            <NavLink to="/Admin"><h3> Admin </h3></NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

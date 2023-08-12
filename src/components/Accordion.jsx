@@ -5,7 +5,6 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Badge from 'react-bootstrap/Badge';
 
-
 import imagen01 from '../assets/img/imagen01.jpeg'
 import imagen02 from '../assets/img/imagen02.jpeg'
 import imagen03 from '../assets/img/imagen03.jpeg'
