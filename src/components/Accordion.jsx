@@ -30,7 +30,7 @@ function BasicExample() {
                 <Accordion.Header>Pizzas</Accordion.Header>
 
                 <Accordion.Body>
-                    <Image src={imagen01} />
+                    <Image src={imagen01} style={{ width: '100%' }} />
 
                     <Card style={{ width: '18rem' }}>
                         <ListGroup variant="flush">
