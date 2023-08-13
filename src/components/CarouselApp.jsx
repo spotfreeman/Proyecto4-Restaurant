@@ -11,7 +11,7 @@ function CarouselApp() {
       <Carousel.Item>
         <Image src={imagen01} style={{ width: '100%' }} />
         <Carousel.Caption>
-          <h3>First slide label</h3>
+          <h3>Ejemplo 01</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -19,7 +19,7 @@ function CarouselApp() {
       <Carousel.Item>
         <Image src={imagen02} style={{ width: '100%' }} />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
+          <h3>Ejemplo 02</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -27,7 +27,7 @@ function CarouselApp() {
       <Carousel.Item>
         <Image src={imagen03} style={{ width: '100%' }} />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Ejemplo 03</h3>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
