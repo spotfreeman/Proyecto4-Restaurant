@@ -12,7 +12,7 @@ function CarouselApp() {
         <Image src={imagen01} style={{ width: '100%' }} />
         <Carousel.Caption>
           <h3>Ejemplo 01</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <p>Ideas para comer</p>
         </Carousel.Caption>
       </Carousel.Item>
 
