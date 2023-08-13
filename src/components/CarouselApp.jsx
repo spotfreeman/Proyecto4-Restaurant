@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
 import imagen01 from '../assets/img/imagen01.jpeg';
-import imagen02 from '../assets/img/Imagen02.jpeg';
+import imagen02 from '../assets/img/imagen02.jpeg';
 import imagen03 from '../assets/img/imagen03.jpeg';
 
 function CarouselApp() {
