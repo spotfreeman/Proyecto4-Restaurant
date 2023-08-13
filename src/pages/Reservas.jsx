@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { db } from '../firebase/firebase'
 import Form from 'react-bootstrap/Form'
-import Image  from "react-bootstrap/Image";
+import Image from "react-bootstrap/Image";
 import imagenRestaurant from '../assets/img/imagenRestaurant.jpg'
 
 export const Reservas = () => {
@@ -9,7 +9,8 @@ export const Reservas = () => {
         nombre: '',
         comensales: '',
         fecha: '',
-        mesa:''
+        mesa: '',
+        correo: ''
     }
 
     const [reserva, setReserva] = useState(initialReserva)
@@ -68,60 +69,73 @@ export const Reservas = () => {
                         onChange={onChange}
                         required
                     />
+
+                    <input
+                        style={{ width: '18rem' }}
+                        type="text"
+                        className="form-control mt-3"
+                        name="correo"
+                        placeholder="Correo"
+                        value={reserva.correo}
+                        onChange={onChange}
+                        required
+                    />
+
+
                     <div>
-                    <h3></h3>
-                    <h6>Escoge tu mesa</h6>
-                    <Form>
-                    {['radio'].map((type) => (
-                        <div key={`inline-${type}`} className="mb-3">
-                        <Form.Check
-                            inline
-                            label="1"
-                            name="mesa"
-                            type={type}
-                            id={`inline-${type}-1`}
-                            value='1'
-                            onChange={onChange}
-                        />
-                        <Form.Check
-                            inline
-                            label="2"
-                            name="mesa"
-                            type={type}
-                            id={`inline-${type}-2`}
-                            value='2'
-                            onChange={onChange}
-                        />
-                        <Form.Check
-                            inline
-                            label="3"
-                            name="mesa"
-                            type={type}
-                            id={`inline-${type}-3`}
-                            value='3'
-                            onChange={onChange}
-                        />
-                        <Form.Check
-                            inline
-                            label="4"
-                            name="mesa"
-                            type={type}
-                            id={`inline-${type}-4`}
-                            value='4'
-                            onChange={onChange}
-                        />
-                                                <Form.Check
-                            inline
-                            label="5"
-                            name="mesa"
-                            type={type}
-                            id={`inline-${type}-4`}
-                            value='5'
-                            onChange={onChange}
-                        />
-                        </div>
-                    ))}
-                    </Form>
+                        <h3></h3>
+                        <h6>Escoge tu mesa</h6>
+                        <Form>
+                            {['radio'].map((type) => (
+                                <div key={`inline-${type}`} className="mb-3">
+                                    <Form.Check
+                                        inline
+                                        label="1"
+                                        name="mesa"
+                                        type={type}
+                                        id={`inline-${type}-1`}
+                                        value='1'
+                                        onChange={onChange}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        label="2"
+                                        name="mesa"
+                                        type={type}
+                                        id={`inline-${type}-2`}
+                                        value='2'
+                                        onChange={onChange}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        label="3"
+                                        name="mesa"
+                                        type={type}
+                                        id={`inline-${type}-3`}
+                                        value='3'
+                                        onChange={onChange}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        label="4"
+                                        name="mesa"
+                                        type={type}
+                                        id={`inline-${type}-4`}
+                                        value='4'
+                                        onChange={onChange}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        label="5"
+                                        name="mesa"
+                                        type={type}
+                                        id={`inline-${type}-4`}
+                                        value='5'
+                                        onChange={onChange}
+                                    />
+                                </div>
+                            ))}
+                        </Form>
                     </div>
 
                     <button

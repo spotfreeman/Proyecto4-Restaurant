@@ -34,6 +34,7 @@ export const Admin = () => {
                                 <th className='text-center' style={{ width: '10px' }} >Fecha de la reserva</th>
                                 <th className='text-center' style={{ width: '5px' }}  >Comensales</th>
                                 <th className='text-center' style={{ width: '5px' }}  >Mesa reservada</th>
+                                <th className='text-center' style={{ width: '5px' }}  >Correo</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,6 +45,7 @@ export const Admin = () => {
                                     <td className='text-center'>{reservas.fecha}</td>
                                     <td className='text-center'>{reservas.comensales}</td>
                                     <td className='text-center'>{reservas.mesa}</td>
+                                    <td className='text-center'>{reservas.correo}</td>
                                 </tr>
                             ))}
                         </tbody>
