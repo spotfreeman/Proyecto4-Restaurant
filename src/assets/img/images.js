@@ -8,32 +8,32 @@ import imagen05 from '../img/imagen05.jpeg'
 export default [
     {
         "img": imagen01,
-        "title": "Pizzas",
-        "description": " Descripcion del servicio",
-        "alt": "Imagen Pizza"
+        "title": "PIZZA DEL MONTE",
+        "description": "Queso de Cabra, Albahaca, Tomate y Pesto",
+        "alt": "Imagen Pizza Del Monte"
     },
     {
         "img": imagen02,
-        "title": "Pizzas",
-        "description": " Descripcion del servicio",
-        "alt": "Imagen Pizza"
+        "title": "PIZZA A LO POBRE",
+        "description": "Entrana a la plancha, huevo, cebolla asada y papas Chips",
+        "alt": "Imagen Pizza a lo pobre"
     },
     {
         "img": imagen03,
-        "title": "Pizzas",
-        "description": " Descripcion del servicio",
-        "alt": "Imagen Pizza"
+        "title": "PIZZA DEL PERAL",
+        "description": "Peras asadas, Queso Azul y Rucula",
+        "alt": "Imagen Pizza del Peral"
     },
     {
         "img": imagen04,
-        "title": "Pizzas",
-        "description": " Descripcion del servicio",
-        "alt": "Imagen Pizza"
+        "title": "PIZZA PAISANA",
+        "description": "Jamon Acaramelado, Champinon, Aceituna",
+        "alt": "Imagen Pizza Paisana"
     },
     {
         "img": imagen05,
-        "title": "Pizzas",
-        "description": " Descripcion del servicio",
-        "alt": "Imagen Pizza"
+        "title": "PIZZA DEL HUERTO",
+        "description": "Palmitos, Albahaca y Tomate",
+        "alt": "Imagen Pizza del Huerto"
     }
 ]
