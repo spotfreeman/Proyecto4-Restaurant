@@ -13,7 +13,7 @@ export const About = () => {
                         <Row>
                             <Col>
                                 <Card className='border-0 p-4'>
-                                    <h3> Encuentranos en...</h3>
+                                    <h3>Ubicacion</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, at fugiat veniam, ducimus animi quas asperiores sit magnam minus voluptates quibusdam, et pariatur quo consequuntur accusantium? Earum voluptas a mollitia?</p>
                                 </Card>
                             </Col>
