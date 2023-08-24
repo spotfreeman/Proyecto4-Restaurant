@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import imagenVertical from '../assets/img/pizzaVertical.jpg';
+import imagenIcon from '../assets/img/icon.png'
 
 export const Home = () => {
     return (
@@ -12,11 +13,18 @@ export const Home = () => {
             <CarouselApp />
 
             <Card className="border-0" >
-                <h1 className="text-center p-3">Especialidades</h1>
-                <p className="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sapiente atque quis eos necessitatibus commodi doloribus impedit modi ipsum nemo, nostrum, placeat nihil optio dolorem. Consequatur voluptatibus illo quas alias.</p>
-                <h3 className="text-center p-3 ">Subtitulo</h3>
-                <p className="p-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis fugit architecto, minus eaque necessitatibus ipsa porro ducimus totam illum atque itaque quod, vitae deserunt. Unde dolorum aliquid quaerat sit quisquam.</p>
+                <h1 className="text-center p-3">Un poco de historia...</h1>
+                <Card className="border-0">
+                    <h3 className="p-4">La historia de la pizza está ligada al consumo del pan por parte de la humanidad. En el antiguo Egipto al descubrir la levadura empiezan a prepararse una especie de panes con la forma y el color del sol, con harina, agua y miel. En la antigua Grecia este pan fue evolucionando y le añadían grasa, especias, ajo y cebolla. </h3>
+                </Card>
+                <Card className="border-0">
+                    <Image src={imagenIcon} style={{ width: '20%', padding: '15px', margin: 'auto' }} />
+                </Card>
+                <Card className="border-0">
+
+                </Card>
             </Card>
+
 
             <div className="bg-black">
 
@@ -36,8 +44,7 @@ export const Home = () => {
                                 <Card.Body>
                                     <Card.Title className="text-white">Las mejores Pizzas!</Card.Title>
                                     <Card.Text className="text-white">
-                                        Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.
+                                        QUE ESPERAS !!! VEN POR LA TUYA.
                                     </Card.Text>
 
                                 </Card.Body>

@@ -47,9 +47,9 @@ export const Reservas = () => {
                         <Row>
                             <Col>
                                 <div className="card m-2 border-0">
-                                    <form className="form gap-5 p-2" onSubmit={onSubmit}>
+                                    <form className="form gap-5 p-2 text-center" onSubmit={onSubmit}>
                                         <input
-                                            style={{ width: '20rem' }}
+                                            style={{ width: '25rem', margin: 'auto', fontSize: 'large' }}
                                             type="text"
                                             className="form-control mt-3"
                                             name="nombre"
@@ -60,7 +60,7 @@ export const Reservas = () => {
                                         />
 
                                         <input
-                                            style={{ width: '18rem', }}
+                                            style={{ width: '25rem', margin: 'auto', fontSize: 'large' }}
                                             type="number"
                                             className="form-control mt-3"
                                             name="comensales"
@@ -71,7 +71,7 @@ export const Reservas = () => {
                                         />
 
                                         <input
-                                            style={{ width: '18rem' }}
+                                            style={{ width: '25rem', margin: 'auto', fontSize: 'large' }}
                                             type="date"
                                             className="form-control mt-3"
                                             name="fecha"
@@ -82,7 +82,7 @@ export const Reservas = () => {
                                         />
 
                                         <input
-                                            style={{ width: '18rem' }}
+                                            style={{ width: '25rem', margin: 'auto', fontSize: 'large' }}
                                             type="text"
                                             className="form-control mt-3"
                                             name="correo"
@@ -151,7 +151,7 @@ export const Reservas = () => {
 
                                         <button
                                             type="submit"
-                                            className="btn btn-primary mt-3"> Reservar </button>
+                                            className="btn btn-primary mt-3 "> Reservar </button>
                                     </form>
                                 </div>
                             </Col>
