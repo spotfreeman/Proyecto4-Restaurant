@@ -1,6 +1,7 @@
 import Accordion from 'react-bootstrap/Accordion';
 import Image from 'react-bootstrap/Image';
-
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Badge from 'react-bootstrap/Badge';
@@ -8,6 +9,9 @@ import Badge from 'react-bootstrap/Badge';
 import imagen01 from '../assets/img/imagen01.jpeg'
 import imagen02 from '../assets/img/imagen02.jpeg'
 import imagen03 from '../assets/img/imagen03.jpeg'
+
+import jugo01 from '../assets/img/jugo01.jpeg'
+import jugo02 from '../assets/img/jugo02.jpeg'
 
 function BasicExample() {
     return (
@@ -24,30 +28,44 @@ function BasicExample() {
 
                 <Accordion.Body>
                     <Image src={imagen01} style={{ width: '100%' }} />
-
-
-
-                    <Card style={{ width: '18rem' }}>
-                        <ListGroup variant="flush">
-                            <ListGroup.Item>DEL MONTE
+                    <Row>
+                        <Col>
+                            <Card className='p-3 m-3 text-center w-100 h-100'>
+                                <h2>EL MONTE</h2>
                                 Queso de Cabra – Albahaca – Tomate – Pesto
                                 $11.700.-
-                                <Badge pill bg="danger">Nueva !!!</Badge> </ListGroup.Item>
-                            <ListGroup.Item>A LO POBRE
-                                Entraña a la plancha – Huevo – Cebolla asada – Papas chip
-                                $11.800.-</ListGroup.Item>
-                            <ListGroup.Item>DEL PERAL
-                                Peras asadas – Queso azul – Rúcula
-                                $9.800.-</ListGroup.Item>
-                            <ListGroup.Item>PAISANA
-                                Jamón Acaramelado – Champiñón – Aceituna
-                                $10.800.-</ListGroup.Item>
-                        </ListGroup>
-                    </Card>
 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco labori
+                                <Badge pill bg="danger" className='p-2'>NUEVA !!!</Badge>
+                            </Card>
+                        </Col>
+                        <Col>
+                            <Card className='p-3 m-3 text-center'>
+                                <h2>A LO POBRE</h2>
+                                Entraña a la plancha – Huevo – Cebolla asada – Papas chip
+                                $11.800.-
+
+                                <Badge pill bg="warning" className='p-2'>RECOMENDADA</Badge>
+                            </Card>
+                        </Col>
+                        <Col>
+                            <Card className='p-3 m-3 text-center'>
+                                <h2>EL MONTE</h2>
+                                Queso de Cabra – Albahaca – Tomate – Pesto
+                                $11.700.-
+
+                            </Card>
+                        </Col>
+                        <Col>
+                            <Card className='p-3 m-3 text-center'>
+                                <h2>PAISANA</h2>
+                                Jamón Acaramelado – Champiñón – Aceituna
+                                $10.800.-
+
+                            </Card>
+                        </Col>
+
+                    </Row>
+
                 </Accordion.Body>
             </Accordion.Item>
 
@@ -55,14 +73,50 @@ function BasicExample() {
             <Accordion.Item eventKey="2">
                 <Accordion.Header>Bebestibles</Accordion.Header>
                 <Accordion.Body>
-                    <Image src={imagen03} />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+
+                    <Row>
+                        <Col className='m-3'>
+                            <Card className='p-3 m-3 text-center w-100 h-100'>
+                                <Image src={jugo01} style={{ width: '20%' }} />
+                                <h2>Jugo Franbuesa</h2>
+                                $1.700.-
+
+
+                            </Card>
+                        </Col>
+                        <Col className='m-3'>
+                            <Card className='p-3 m-3 text-center w-100 h-100'>
+                                <Image src={jugo02} style={{ width: '20%' }} />
+                                <h2>Jugo Limonada</h2>
+                                Entraña a la plancha – Huevo – Cebolla asada – Papas chip
+                                $11.800.-
+
+
+                            </Card>
+                        </Col>
+                    </Row>
+
+
+                    <Row>
+                        <Col className='m-3'>
+                            <Card className='p-3 m-3 text-center w-100 h-100'>
+                                <h2>Gaseosas</h2>
+                                Queso de Cabra – Albahaca – Tomate – Pesto
+                                $11.700.-
+
+
+                            </Card>
+                        </Col>
+                        <Col className='m-3'>
+                            <Card className='p-3 m-3 text-center w-100 h-100'>
+                                <h2>A LO POBRE</h2>
+                                Entraña a la plancha – Huevo – Cebolla asada – Papas chip
+                                $11.800.-
+
+
+                            </Card>
+                        </Col>
+                    </Row>
                 </Accordion.Body>
             </Accordion.Item>
 
