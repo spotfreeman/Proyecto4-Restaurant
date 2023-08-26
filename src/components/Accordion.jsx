@@ -25,12 +25,23 @@ function BasicExample() {
                 <Accordion.Body>
                     <Image src={imagen01} style={{ width: '100%' }} />
 
+
+
                     <Card style={{ width: '18rem' }}>
                         <ListGroup variant="flush">
-                            <ListGroup.Item>Full Queso <Badge pill bg="danger">Nueva !!!</Badge> </ListGroup.Item>
-                            <ListGroup.Item>Napolitana</ListGroup.Item>
-                            <ListGroup.Item>Full Carne</ListGroup.Item>
-                            <ListGroup.Item>Full Pollo</ListGroup.Item>
+                            <ListGroup.Item>DEL MONTE
+                                Queso de Cabra – Albahaca – Tomate – Pesto
+                                $11.700.-
+                                <Badge pill bg="danger">Nueva !!!</Badge> </ListGroup.Item>
+                            <ListGroup.Item>A LO POBRE
+                                Entraña a la plancha – Huevo – Cebolla asada – Papas chip
+                                $11.800.-</ListGroup.Item>
+                            <ListGroup.Item>DEL PERAL
+                                Peras asadas – Queso azul – Rúcula
+                                $9.800.-</ListGroup.Item>
+                            <ListGroup.Item>PAISANA
+                                Jamón Acaramelado – Champiñón – Aceituna
+                                $10.800.-</ListGroup.Item>
                         </ListGroup>
                     </Card>
 
@@ -40,21 +51,8 @@ function BasicExample() {
                 </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="2">
-                <Accordion.Header>Hamburguesas</Accordion.Header>
-                <Accordion.Body>
-                    <Image src={imagen02} />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </Accordion.Body>
-            </Accordion.Item>
 
-            <Accordion.Item eventKey="3">
+            <Accordion.Item eventKey="2">
                 <Accordion.Header>Bebestibles</Accordion.Header>
                 <Accordion.Body>
                     <Image src={imagen03} />
@@ -68,7 +66,7 @@ function BasicExample() {
                 </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="4">
+            <Accordion.Item eventKey="3">
                 <Accordion.Header>Postres</Accordion.Header>
                 <Accordion.Body>
                     <Image src={imagen01} />
