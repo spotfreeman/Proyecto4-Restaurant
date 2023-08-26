@@ -2,7 +2,7 @@ import { useState } from "react";
 import { db } from '../firebase/firebase'
 import Form from 'react-bootstrap/Form'
 import Image from "react-bootstrap/Image";
-import imagenRestaurant from '../assets/img/imagenRestaurant.jpg'
+import imagenRestaurant from '../assets/img/restaurant.jpeg'
 
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col';
