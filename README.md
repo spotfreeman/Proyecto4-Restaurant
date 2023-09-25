@@ -7,7 +7,7 @@ https://robdev.netlify.app
 
 ## Insignias
 
-![Badge en Desarrollo](https://img.shields.io/badge/STATUS-EnDesarrollo-green)
+![Badge en Aprobado](https://img.shields.io/badge/STATUS-Aprobado-green)
 
 ## Visual
 
