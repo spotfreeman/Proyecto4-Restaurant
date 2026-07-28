@@ -1,172 +1,230 @@
-import { useState } from "react";
-import { db } from '../firebase/firebase'
-import Form from 'react-bootstrap/Form'
-import Image from "react-bootstrap/Image";
-import imagenRestaurant from '../assets/img/restaurant.jpeg'
-
-import Card from 'react-bootstrap/Card'
-import Col from 'react-bootstrap/Col';
+import React, { useState } from 'react';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Alert from 'react-bootstrap/Alert';
+import Spinner from 'react-bootstrap/Spinner';
+import { db } from '../firebase/firebase';
+import imagenRestaurant from '../assets/img/restaurant.jpeg';
+import './Reservas.css';
 
 export const Reservas = () => {
     const initialReserva = {
         nombre: '',
         comensales: '',
         fecha: '',
-        mesa: '',
+        mesa: '1',
         correo: ''
-    }
+    };
 
-    const [reserva, setReserva] = useState(initialReserva)
+    const [reserva, setReserva] = useState(initialReserva);
+    const [submitting, setSubmitting] = useState(false);
+    const [successMessage, setSuccessMessage] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const onSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        setSubmitting(true);
+        setErrorMessage('');
+        setSuccessMessage(false);
 
-        await db.collection('reserva').add(reserva)
-        setReserva(initialReserva)
-
-        console.log('Formulario enviado')
-        console.log(reserva)
-    }
+        try {
+            await db.collection('reserva').add(reserva);
+            setReserva(initialReserva);
+            setSuccessMessage(true);
+        } catch (error) {
+            console.error('Error guardando reserva:', error);
+            setErrorMessage('Ocurrió un error al enviar la reserva. Por favor intenta nuevamente.');
+        } finally {
+            setSubmitting(false);
+        }
+    };
 
     const onChange = (e) => {
-        console.log(e.target.name)
-        console.log(e.target.value)
-        setReserva({ ...reserva, [e.target.name]: e.target.value })
-    }
+        setReserva({ ...reserva, [e.target.name]: e.target.value });
+    };
+
+    const handleSelectMesa = (mesaNum) => {
+        setReserva({ ...reserva, mesa: mesaNum.toString() });
+    };
 
     return (
-        <>
-            <Row>
-                <Col>
-                    <Card>
-                        <Card.Header className='text-center border-0'>
-                            <h4 className="border-0">Reservas</h4>
-                        </Card.Header>
-                        <Row>
-                            <Col>
-                                <div className="card m-2 border-0">
-                                    <form className="form gap-5 p-2 text-center" onSubmit={onSubmit}>
-                                        <input
-                                            style={{ width: '25rem', margin: 'auto', fontSize: 'large' }}
-                                            type="text"
-                                            className="form-control mt-3"
-                                            name="nombre"
-                                            placeholder="Ingrese su nombre"
-                                            value={reserva.nombre}
-                                            onChange={onChange}
-                                            required
-                                        />
+        <div className="reservas-page">
+            {/* Hero Header Banner */}
+            <section className="reservas-hero-banner text-center">
+                <Container>
+                    <span className="reservas-badge">
+                        <i className="bi bi-calendar2-check-fill me-1"></i> Reservas en Línea
+                    </span>
+                    <h1 className="reservas-title">Agenda tu Mesa</h1>
+                    <p className="reservas-subtitle">
+                        Asegura tu experiencia gastronómica en Gourmet Bistro de forma rápida y sencilla.
+                    </p>
+                </Container>
+            </section>
 
-                                        <input
-                                            style={{ width: '25rem', margin: 'auto', fontSize: 'large' }}
-                                            type="number"
-                                            className="form-control mt-3"
-                                            name="comensales"
-                                            placeholder="Cantidad de clientes"
-                                            value={reserva.comensales}
-                                            onChange={onChange}
-                                            required
-                                        />
+            <Container className="py-5">
+                {successMessage && (
+                    <Alert variant="success" onClose={() => setSuccessMessage(false)} dismissible className="mb-4 text-center">
+                        <i className="bi bi-check-circle-fill me-2 fs-5"></i>
+                        <strong>¡Reserva realizada con éxito!</strong> Hemos registrado tu solicitud. Te esperamos el día agendado.
+                    </Alert>
+                )}
 
-                                        <input
-                                            style={{ width: '25rem', margin: 'auto', fontSize: 'large' }}
-                                            type="date"
-                                            className="form-control mt-3"
-                                            name="fecha"
-                                            placeholder="Fecha de su reserva"
-                                            value={reserva.fecha}
-                                            onChange={onChange}
-                                            required
-                                        />
+                {errorMessage && (
+                    <Alert variant="danger" onClose={() => setErrorMessage('')} dismissible className="mb-4 text-center">
+                        <i className="bi bi-exclamation-triangle-fill me-2 fs-5"></i>
+                        {errorMessage}
+                    </Alert>
+                )}
 
-                                        <input
-                                            style={{ width: '25rem', margin: 'auto', fontSize: 'large' }}
-                                            type="text"
-                                            className="form-control mt-3"
-                                            name="correo"
-                                            placeholder="Correo"
-                                            value={reserva.correo}
-                                            onChange={onChange}
-                                            required
-                                        />
+                <Row className="g-4">
+                    {/* Left Column: Form Card */}
+                    <Col lg={7}>
+                        <div className="reservas-form-card">
+                            <h3 className="form-card-title">
+                                <i className="bi bi-card-checklist text-warning"></i> Datos de la Reserva
+                            </h3>
 
-
-                                        <div>
-                                            <h3></h3>
-                                            <h6>Escoge tu mesa</h6>
-                                            <Form>
-                                                {['radio'].map((type) => (
-                                                    <div key={`inline-${type}`} className="mb-3">
-                                                        <Form.Check
-                                                            inline
-                                                            label="1"
-                                                            name="mesa"
-                                                            type={type}
-                                                            id={`inline-${type}-1`}
-                                                            value='1'
-                                                            onChange={onChange}
-                                                        />
-                                                        <Form.Check
-                                                            inline
-                                                            label="2"
-                                                            name="mesa"
-                                                            type={type}
-                                                            id={`inline-${type}-2`}
-                                                            value='2'
-                                                            onChange={onChange}
-                                                        />
-                                                        <Form.Check
-                                                            inline
-                                                            label="3"
-                                                            name="mesa"
-                                                            type={type}
-                                                            id={`inline-${type}-3`}
-                                                            value='3'
-                                                            onChange={onChange}
-                                                        />
-                                                        <Form.Check
-                                                            inline
-                                                            label="4"
-                                                            name="mesa"
-                                                            type={type}
-                                                            id={`inline-${type}-4`}
-                                                            value='4'
-                                                            onChange={onChange}
-                                                        />
-                                                        <Form.Check
-                                                            inline
-                                                            label="5"
-                                                            name="mesa"
-                                                            type={type}
-                                                            id={`inline-${type}-4`}
-                                                            value='5'
-                                                            onChange={onChange}
-                                                        />
-                                                    </div>
-                                                ))}
-                                            </Form>
-                                        </div>
-
-                                        <button
-                                            type="submit"
-                                            className="btn btn-primary mt-3 "> Reservar </button>
-                                    </form>
+                            <form onSubmit={onSubmit}>
+                                {/* Nombre */}
+                                <div className="reservas-input-group">
+                                    <i className="bi bi-person-fill"></i>
+                                    <Form.Control
+                                        type="text"
+                                        name="nombre"
+                                        placeholder="Nombre completo *"
+                                        value={reserva.nombre}
+                                        onChange={onChange}
+                                        required
+                                        className="reservas-input"
+                                    />
                                 </div>
-                            </Col>
 
-                            <Col>
-                                <Card className='border-0 '>
-                                    <div className="text-center">
-                                        <Image src={imagenRestaurant} style={{ width: '100%' }} />
-                                    </div>
-                                </Card>
-                            </Col>
-                        </Row>
-                    </Card>
-                </Col>
-            </Row>
-        </>
+                                {/* Correo */}
+                                <div className="reservas-input-group">
+                                    <i className="bi bi-envelope-fill"></i>
+                                    <Form.Control
+                                        type="email"
+                                        name="correo"
+                                        placeholder="Correo electrónico de contacto *"
+                                        value={reserva.correo}
+                                        onChange={onChange}
+                                        required
+                                        className="reservas-input"
+                                    />
+                                </div>
+
+                                <Row className="g-3">
+                                    {/* Comensales */}
+                                    <Col sm={6}>
+                                        <div className="reservas-input-group">
+                                            <i className="bi bi-people-fill"></i>
+                                            <Form.Control
+                                                type="number"
+                                                name="comensales"
+                                                placeholder="Cantidad personas *"
+                                                min="1"
+                                                max="20"
+                                                value={reserva.comensales}
+                                                onChange={onChange}
+                                                required
+                                                className="reservas-input"
+                                            />
+                                        </div>
+                                    </Col>
+
+                                    {/* Fecha */}
+                                    <Col sm={6}>
+                                        <div className="reservas-input-group">
+                                            <i className="bi bi-calendar-event-fill"></i>
+                                            <Form.Control
+                                                type="date"
+                                                name="fecha"
+                                                value={reserva.fecha}
+                                                onChange={onChange}
+                                                required
+                                                className="reservas-input"
+                                            />
+                                        </div>
+                                    </Col>
+                                </Row>
+
+                                {/* Seleccionar Mesa Grid */}
+                                <h4 className="table-selection-heading">
+                                    <i className="bi bi-grid-3x3-gap-fill me-1 text-warning"></i> Selecciona tu Mesa
+                                </h4>
+
+                                <div className="table-cards-grid">
+                                    {[1, 2, 3, 4, 5].map((num) => (
+                                        <div
+                                            key={num}
+                                            className={`table-option-card ${reserva.mesa === num.toString() ? 'selected' : ''}`}
+                                            onClick={() => handleSelectMesa(num)}
+                                        >
+                                            <i className="bi bi-grid-fill table-card-icon"></i>
+                                            <span className="table-card-label">Mesa {num}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Submit Button */}
+                                <button type="submit" disabled={submitting} className="btn-submit-reserva">
+                                    {submitting ? (
+                                        <>
+                                            <Spinner animation="border" size="sm" className="me-2" />
+                                            Guardando Reserva...
+                                        </>
+                                    ) : (
+                                        <>
+                                            <i className="bi bi-calendar2-check-fill"></i> Confirmar Reserva
+                                        </>
+                                    )}
+                                </button>
+                            </form>
+                        </div>
+                    </Col>
+
+                    {/* Right Column: Restaurant Info Card */}
+                    <Col lg={5}>
+                        <div className="reservas-info-card">
+                            <div className="reservas-img-wrapper">
+                                <img src={imagenRestaurant} alt="Ambiente de Gourmet Bistro" />
+                            </div>
+                            <div className="reservas-info-body">
+                                <h4 className="fw-bold text-white mb-2">Información Importante</h4>
+                                <p className="text-secondary small">
+                                    Tu reserva será procesada y confirmada en tiempo real.
+                                </p>
+
+                                <ul className="policy-list">
+                                    <li className="policy-item">
+                                        <i className="bi bi-clock-history policy-icon"></i>
+                                        <span>
+                                            <strong>15 min de tolerancia:</strong> Guardamos tu mesa durante 15 minutos pasados de la hora reservada.
+                                        </span>
+                                    </li>
+                                    <li className="policy-item">
+                                        <i className="bi bi-envelope-check policy-icon"></i>
+                                        <span>
+                                            <strong>Confirmación:</strong> Recibirás los detalles de tu mesa al correo electrónico registrado.
+                                        </span>
+                                    </li>
+                                    <li className="policy-item">
+                                        <i className="bi bi-people policy-icon"></i>
+                                        <span>
+                                            <strong>Grupos grandes (8+ personas):</strong> Para reservas especiales o eventos privados, por favor contáctanos al WhatsApp +56 9 8765 4321.
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     );
 };
+
+export default Reservas;
